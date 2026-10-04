@@ -1,0 +1,31 @@
+{
+  "name": "scamlens-bharat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-powered investor safety and financial misinformation detection platform for Indian retail investors",
+  "scripts": {
+    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,green\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:backend": "npm --prefix backend run build",
+    "build:frontend": "npm --prefix frontend run build",
+    "build": "npm run build:backend && npm run build:frontend",
+    "test:backend": "npm --prefix backend test",
+    "test": "npm run test:backend",
+    "start": "npm --prefix backend start"
+  },
+  "keywords": [
+    "fintech",
+    "investor-protection",
+    "bharat",
+    "scam-detection",
+    "sebi",
+    "ai-safety"
+  ],
+  "author": "ScamLens Bharat Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}
